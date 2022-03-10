@@ -2,8 +2,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: simple-webapp-color
-  labels:
-    app: colorapp
 spec:
  containers:
  - name: simple-webapp-color
