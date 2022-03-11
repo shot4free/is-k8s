@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-vol
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: /usr/share/nginx/www
+      name: www-data
+  volumes:
+  - name: www-data
+    hostPath:
+      path: /www-data
+      type: Directory
